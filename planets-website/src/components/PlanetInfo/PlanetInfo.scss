@@ -1,0 +1,89 @@
+@use '../../styles.scss' as s;
+
+.container{
+    
+        .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        @media screen and (max-width: 1110px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content__image {
+            width: calc(100% - 350px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        
+            @media screen and (max-width: 1110px) {
+                height: 400px;
+                margin: 30px auto;
+            }
+
+            img {
+                height: 290px;
+            }
+
+
+            .img--geology {
+                position: absolute;
+                top: 60%;
+                height: 200px;
+                z-index: 1; 
+            }
+        }
+
+        .content__card {
+            width: 350px;
+
+            @media screen and (max-width: 1110px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .content__text{
+
+                @media screen and (max-width: 1110px) {
+                    width: 45%;
+                    margin-top: 30px;
+                }
+
+                .planet__info {
+                    margin: 24px 0;
+                    height: 125px;
+
+                    @media screen and (max-width: 1110px) {
+                        margin-top: 24px;
+                        height: 132px;
+                    }
+
+                }
+    
+                .source {
+                    font-weight: 100;
+
+                    @media screen and (max-width: 1110px) {
+                        margin-top: 32px;
+                    }
+    
+                    a {
+                        font-weight: 400;
+                        color: s.$white;
+                        opacity: 0.7;
+                    }
+    
+                    .icon--source {
+                        height: 11px;
+                    }  
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use './../../styles.scss' as s;
+
+.container__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    @media screen and (max-width: 1110px) {
+        margin-top: 30px;
+
+    }
+    
+
+    .card {
+        width: 255px;
+        border: 1px solid #ffffff33;
+        padding: 20px 24px 28px;
+
+        @media screen and (max-width: 1110px) {
+            width: 22%;
+            padding: 16px 16px 20px;
+        }
+        
+        
+        .card__content {
+            
+            text-align: left;
+
+            .heading {
+                color: s.$lightgrey;
+                font-weight: 400;
+
+                @media screen and (max-width: 1110px) {
+                    font-size: 10px;
+                }
+            }
+
+            .card__text {
+                @media screen and (max-width: 1110px) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@100;400;700&display=swap');
+
+
+// COLORS
+
+$white: #ffffff;
+$primary: #070724;
+$darkgrey: #38384F;
+$lightgrey: #838391;
+
+//TYPOGRAPHY
+
+.h1 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.h2 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 40px;
+    letter-spacing: -1.5;
+}
+
+.h3 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.6;
+    text-transform: uppercase;
+}
+
+.h4 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.body__text {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.7;
+}
+
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    color: $white;
+    background: $primary url('/assets/background-stars.svg');
+}
+
