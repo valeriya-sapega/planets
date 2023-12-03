@@ -8,7 +8,14 @@
 
     @media screen and (max-width: 1110px) {
         margin-top: 30px;
+    }
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0 24px;
+        gap: 8px;
     }
     
 
@@ -21,11 +28,22 @@
             width: 22%;
             padding: 16px 16px 20px;
         }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 10px 24px 12px;
+        }
         
         
         .card__content {
             
             text-align: left;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
 
             .heading {
                 color: s.$lightgrey;
@@ -39,6 +57,10 @@
             .card__text {
                 @media screen and (max-width: 1110px) {
                     font-size: 24px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    margin-left: auto;
                 }
             }
         }

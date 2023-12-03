@@ -1,12 +1,17 @@
 @use '../../styles.scss' as s;
 
 .container{
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
     
         .content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        align-items: center;
 
         @media screen and (max-width: 1110px) {
             flex-direction: column;
@@ -25,8 +30,16 @@
                 margin: 30px auto;
             }
 
+            @media screen and (max-width: 768px) {
+                height: 300px;
+            }
+
             img {
                 height: 290px;
+
+                @media screen and (max-width: 768px) {
+                    height: 200px;
+                }
             }
 
 
@@ -35,6 +48,10 @@
                 top: 60%;
                 height: 200px;
                 z-index: 1; 
+
+                @media screen and (max-width: 768px) {
+                    height: 100px;
+                }
             }
         }
 
@@ -48,12 +65,24 @@
                 width: 100%;
             }
 
+            @media screen and (max-width: 768px) {
+                justify-content: center;
+                text-align: center;
+                padding: 28px 24px;
+            }
+
             .content__text{
 
                 @media screen and (max-width: 1110px) {
                     width: 45%;
                     margin-top: 30px;
                 }
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    margin: 0;
+                }
+
 
                 .planet__info {
                     margin: 24px 0;
@@ -62,6 +91,10 @@
                     @media screen and (max-width: 1110px) {
                         margin-top: 24px;
                         height: 132px;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        height: auto;
                     }
 
                 }

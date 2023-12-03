@@ -12,6 +12,9 @@ const App: React.FC = () => {
     const [renderedPlanet, setRenderedPlanet] = useState<Planet>(data[0])
     const [section, setSection] = useState<"overview" | "structure" | "geology">("overview")
     
+
+
+
     const handleClick = (name: string): void => {
         
         const planet = data.find(el => el.name === name)

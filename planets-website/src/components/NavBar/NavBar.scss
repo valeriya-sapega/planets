@@ -11,6 +11,11 @@ nav {
     @media screen and (max-width: 1110px) {
         flex-direction: column;
     }
+    @media screen and (max-width: 768px) {
+        height: 68px;
+        padding: 16px 24px;
+        flex-direction: row;
+    }
 
 
     .logo {
@@ -24,23 +29,73 @@ nav {
         @media screen and (max-width: 1110px) {
             margin: 32px ;
         }
+
+        @media screen and (max-width: 768px) {
+           margin: 0;
+        }
     }
 
-    .links {
+    .menu-icon {
+        margin: 0;
+    }
+
+    .nav-menu {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 32px;
+        list-style: none;
 
         @media screen and (max-width: 1110px) {
             margin: 26px ;
         }
 
-        .link {
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            position: absolute;
+            z-index: 2;
+            top: 68px;
+            left: 0;
+            background-color: s.$primary;
+            width: 100%;
+            margin: 0;
+            gap: 0;
+            padding: 44px 24px;
+            height: calc(100dvh - 68px);
+            
+        }
+
+        .nav-item {
             font-size: 13px;
             color: s.$white;
             opacity: 0.7;
             letter-spacing: 1px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+                opacity: 1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0;
+                border-bottom: 1px solid s.$darkgrey;
+
+                &:last-child{
+                border: 0;
+                 }
+
+                .list-dot {
+                    border-radius: 50%;
+                    height: 20px;
+                    width: 20px;
+                    margin-right: 24px;
+                }
+
+                .chevron-icon {
+                    margin-left: auto;
+                }
+
+            }
 
             &:hover {
                 color: s.$white;
@@ -50,5 +105,6 @@ nav {
 
     
     }
+
 }
 
