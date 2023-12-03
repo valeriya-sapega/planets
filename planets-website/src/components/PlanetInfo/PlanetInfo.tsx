@@ -2,7 +2,7 @@ import React from 'react'
 import { PlanetInfoProps } from '../../interfaces'
 import Buttons from '../Buttons/Buttons'
 import './PlanetInfo.scss'
-import iconSource from '../../icons/icon-source.svg'
+import { IconSource } from '../../Icons'
 import { useMediaQuery } from 'react-responsive'
 
 const PlanetInfo: React.FC<PlanetInfoProps> = ({ renderedPlanet, section, setSection }) => {
@@ -48,8 +48,10 @@ const PlanetInfo: React.FC<PlanetInfoProps> = ({ renderedPlanet, section, setSec
                         <div className='content__text'> 
                             <h1 className='h1'>{name}</h1>
                             <p className='body__text planet__info'>{chosenSection.content}</p>
-                            <p className='body__text source'>Source: <a href={chosenSection.source} target='_blank'>Wikipedia</a> <img className='icon--source' src={ iconSource } />
-                            </p>
+                            <div className='source'>
+                                <p className='body__text'>Source: <a href={chosenSection.source} target='_blank'>Wikipedia</a> 
+                                </p><IconSource/>
+                            </div>
                         </div>
                         <Buttons handleClick={handleClick} name={name} />
                     </div>
@@ -65,8 +67,10 @@ const PlanetInfo: React.FC<PlanetInfoProps> = ({ renderedPlanet, section, setSec
                         <div className='content__text'> 
                             <h2 className='h2'>{name}</h2>
                             <p className='body__text planet__info'>{chosenSection.content}</p>
-                            <p className='body__text source'>Source: <a href={chosenSection.source} target='_blank'>Wikipedia</a> <img className='icon--source' src={ iconSource } />
-                            </p>
+                            <div className='source'>
+                                <p className='body__text'><span>Source: </span><a href={chosenSection.source} target='_blank'>Wikipedia</a></p>
+                                <IconSource />
+                            </div>
                         </div>
                     </div>
                 </div>

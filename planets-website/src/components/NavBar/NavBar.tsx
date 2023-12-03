@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import './NavBar.scss'
 import data from '../../../data.json';
 import { NavBarProps, Planet } from "../../interfaces";
-import menuIcon from '../../icons/icon-hamburger.svg';
-import chevronIcon from '../../icons/icon-chevron.svg';
+import { IconChevron, IconMenu } from "../../Icons";
 import { buttonBackgroundColor } from '../../Colors'
 import { useMediaQuery } from "react-responsive";
 
@@ -29,13 +28,13 @@ const NavBar: React.FC<NavBarProps> = ({ handleClick }) => {
 
       {isMobile &&
         <>      
-          <img
-            className="menu-icon"
-            src={menuIcon}
-            alt="menu icon"
-            onClick={() => setIsClicked(!isClicked)}
-            style={{opacity: isClicked ? '0.6' : '1'}}  
-          />
+        <div
+          className="menu-icon"
+          onClick={() => setIsClicked(!isClicked)}
+          style={{ opacity: isClicked ? '0.6' : '1' }}>
+          <IconMenu />
+        </div>
+
         {isClicked && 
           <ul className='nav-menu'>
             {data.map((el: Planet, i: number) => (
@@ -51,7 +50,7 @@ const NavBar: React.FC<NavBarProps> = ({ handleClick }) => {
                   style={{backgroundColor: buttonBackgroundColor[el.name]}}
                 ></span>
                 <span className="item-name">{el.name}</span>
-                <img className='chevron-icon' src={chevronIcon} alt="chevron icon" />
+                <div className='chevron-icon'><IconChevron /></div>
               </li>))}
           </ul>
         }

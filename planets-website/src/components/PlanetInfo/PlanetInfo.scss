@@ -101,6 +101,13 @@
     
                 .source {
                     font-weight: 100;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    svg {
+                        margin-left: 4px;
+                    }
 
                     @media screen and (max-width: 1110px) {
                         margin-top: 32px;
