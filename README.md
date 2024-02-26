@@ -11,7 +11,7 @@ Responsive React app about Solar System Planets using **TypeScript** and **SCSS*
   
 ### Personal Achievement:
 - Used TypeScript on a real-life app
-- Implemented child-parent inheritance without using Router components, Context API, and reducers for a better understanding of prop-drilling pros and *(mostly)* cons
+- Implemented child-parent inheritance without using Router components, Context API, and reducers for a better understanding of prop-drilling pros
 - Learned SCSS basics
 
 
